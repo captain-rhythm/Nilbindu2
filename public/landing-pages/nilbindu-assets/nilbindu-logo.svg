@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 54" width="160" height="54" fill="none">
+  <defs>
+    <!-- Water Drop Gradient -->
+    <linearGradient id="dropGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="45%" stop-color="#1565c0"/>
+      <stop offset="100%" stop-color="#0288d1"/>
+    </linearGradient>
+    <!-- Inner Specular Highlight Gradient -->
+    <linearGradient id="highlightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4fc3f7" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#29b6f6" stop-opacity="0.35"/>
+    </linearGradient>
+    <!-- Filter for subtle depth -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Water Droplet Icon -->
+  <g transform="translate(6, 4)" filter="url(#dropShadow)">
+    <!-- Outer Teardrop Body -->
+    <path d="M22 6 C20 10 10 24 10 32 A12 12 0 0 0 34 32 C34 24 24 10 22 6 Z" fill="url(#dropGrad)"/>
+    
+    <!-- Subtle Specular Reflection Oval -->
+    <ellipse cx="17.5" cy="30" rx="3.5" ry="6.5" transform="rotate(-15 17.5 30)" fill="url(#highlightGrad)"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(48, 0)">
+    <!-- English: Nilbindu -->
+    <text x="0" y="24" fill="#1b6cb0" font-family="'Onest', 'Inter', system-ui, -apple-system, sans-serif" font-size="21" font-weight="700" letter-spacing="-0.02em">Nilbindu</text>
+    
+    <!-- Bengali: নীলবিন্দু -->
+    <text x="1" y="42" fill="#2da9fc" font-family="'Noto Sans Bengali', 'Hind Siliguri', 'SolaimanLipi', 'Onest', sans-serif" font-size="16" font-weight="600" letter-spacing="0.01em">নীলবিন্দু</text>
+  </g>
+</svg>

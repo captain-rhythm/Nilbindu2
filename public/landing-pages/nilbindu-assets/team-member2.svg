@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141c24"/>
+      <stop offset="100%" stop-color="#080c10"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#38b6db" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#080c10" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="480" fill="url(#bg)"/>
+  <circle cx="200" cy="190" r="140" fill="url(#glow)"/>
+
+  <!-- Geometric Portrait Silhouette / Frame -->
+  <circle cx="200" cy="180" r="85" fill="none" stroke="#dfe7e0" stroke-width="1.2" stroke-opacity="0.3"/>
+  <circle cx="200" cy="180" r="75" fill="#18222b" stroke="#38b6db" stroke-width="1.5" stroke-opacity="0.7"/>
+
+  <!-- Minimalist Head / Shoulders Avatar -->
+  <circle cx="200" cy="155" r="32" fill="#dfe7e0" opacity="0.9"/>
+  <path d="M142 225 C142 195 168 185 200 185 C232 185 258 195 258 225 Z" fill="#dfe7e0" opacity="0.85"/>
+
+  <!-- Monogram Water Seal -->
+  <circle cx="200" cy="275" r="16" fill="#080c10" stroke="#dfe7e0" stroke-width="1" stroke-opacity="0.5"/>
+  <circle cx="200" cy="275" r="6" fill="#38b6db"/>
+
+  <!-- Name & Title Plate -->
+  <g font-family="'Onest', sans-serif" text-anchor="middle">
+    <text x="200" y="340" fill="#dfe7e0" font-size="19" font-weight="500" letter-spacing="1">Filtration Engineer</text>
+    <text x="200" y="368" fill="#38b6db" font-size="11" font-weight="500" letter-spacing="2.5">WATER QUALITY LEAD</text>
+    <text x="200" y="392" fill="#78837c" font-size="11" letter-spacing="1">MEDIA &amp; TESTING</text>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e14"/>
+      <stop offset="100%" stop-color="#040608"/>
+    </linearGradient>
+    <radialGradient id="waterRipple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38b6db" stop-opacity="0.4"/>
+      <stop offset="70%" stop-color="#206880" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#05070a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+
+  <!-- Top Badge -->
+  <rect x="50" y="46" width="190" height="28" rx="14" fill="#0c1117" stroke="#e0231c" stroke-width="1" stroke-opacity="0.5"/>
+  <circle cx="68" cy="60" r="4" fill="#e0231c"/>
+  <text x="82" y="64" fill="#dfe7e0" font-family="'Onest', sans-serif" font-size="10" font-weight="500" letter-spacing="2">ACCESS &amp; OUTLET</text>
+
+  <!-- Clean Tap & Water Drop Art -->
+  <g transform="translate(400, 220)">
+    <!-- Water Ripple Rings -->
+    <ellipse cx="0" cy="110" rx="180" ry="45" fill="url(#waterRipple)"/>
+    <ellipse cx="0" cy="110" rx="130" ry="32" fill="none" stroke="#38b6db" stroke-width="1.2" opacity="0.4"/>
+    <ellipse cx="0" cy="110" rx="70" ry="18" fill="none" stroke="#38b6db" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Tap / Spout Geometry -->
+    <path d="M-120 -80 L0 -80 L0 -20" fill="none" stroke="#dfe7e0" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    <circle cx="0" cy="-20" r="8" fill="#e0231c"/>
+
+    <!-- The Blue Drop ("Nilbindu") -->
+    <path d="M0 25 C-12 45 -22 65 -22 80 A22 22 0 0 0 22 80 C22 65 12 45 0 25 Z" fill="#38b6db" opacity="0.9"/>
+    <circle cx="6" cy="74" r="4" fill="#ffffff" opacity="0.6"/>
+  </g>
+
+  <!-- Text / Philosophy -->
+  <g font-family="'Onest', sans-serif" text-anchor="middle">
+    <text x="400" y="380" fill="#dfe7e0" font-size="15" letter-spacing="1">NILBINDU COMMUNITY TAP POINT</text>
+    <text x="400" y="405" fill="#78837c" font-size="11" letter-spacing="2">DIRECT REFILL · ZERO CHEMICAL RESIDUE · GRAVITY FED</text>
+    <text x="400" y="450" fill="#aab4ad" font-size="12" letter-spacing="0.5">Continuous Safe Drinking Water Refill Point for Households</text>
+  </g>
+</svg>

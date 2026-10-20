@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18202a"/>
+      <stop offset="100%" stop-color="#0a0e14"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="38%" r="55%">
+      <stop offset="0%" stop-color="#c9a24a" stop-opacity="0.25"/>
+      <stop offset="60%" stop-color="#e0231c" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0a0e14" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="500" height="560" fill="url(#bg)"/>
+  <circle cx="250" cy="210" r="170" fill="url(#glow)"/>
+
+  <!-- Ornate Technical Frame -->
+  <circle cx="250" cy="200" r="105" fill="none" stroke="#dfe7e0" stroke-width="1.2" stroke-opacity="0.3"/>
+  <circle cx="250" cy="200" r="95" fill="#1b2530" stroke="#c9a24a" stroke-width="1.8" stroke-opacity="0.8"/>
+  <circle cx="250" cy="200" r="115" fill="none" stroke="#dfe7e0" stroke-width="1" stroke-dasharray="3 6" opacity="0.2"/>
+
+  <!-- Minimalist Distinguished Mentor Silhouette -->
+  <circle cx="250" cy="170" r="40" fill="#dfe7e0" opacity="0.9"/>
+  <path d="M175 255 C175 215 208 205 250 205 C292 205 325 215 325 255 Z" fill="#dfe7e0" opacity="0.85"/>
+
+  <!-- Mentor Emblem -->
+  <circle cx="250" cy="315" r="20" fill="#0c1117" stroke="#c9a24a" stroke-width="1.2"/>
+  <polygon points="250,303 254,313 264,314 256,321 259,331 250,325 241,331 244,321 236,314 246,313" fill="#c9a24a"/>
+
+  <!-- Name & Title Plate -->
+  <g font-family="'Onest', sans-serif" text-anchor="middle">
+    <text x="250" y="388" fill="#dfe7e0" font-size="22" font-weight="500" letter-spacing="1">Faculty Project Advisor</text>
+    <text x="250" y="418" fill="#c9a24a" font-size="12" font-weight="500" letter-spacing="3">ACADEMIC &amp; TECHNICAL MENTOR</text>
+    <text x="250" y="445" fill="#aab4ad" font-size="12" letter-spacing="1">SUSTAINABLE ENGINEERING &amp; WATER SANITATION</text>
+  </g>
+</svg>

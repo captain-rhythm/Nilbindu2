@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e14"/>
+      <stop offset="100%" stop-color="#040608"/>
+    </linearGradient>
+    <linearGradient id="chamber" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1b242e" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0e1318" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="waterFlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a5872" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#297c9b" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#38b6db" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="emberGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e0231c"/>
+      <stop offset="100%" stop-color="#ff5a3c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+  
+  <!-- Subtle Grid & Atmosphere -->
+  <g opacity="0.08" stroke="#dfe7e0" stroke-width="1">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="250" x2="800" y2="250"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+  </g>
+
+  <!-- Water Ripple / Ambient Circles -->
+  <circle cx="400" cy="250" r="180" fill="none" stroke="#297c9b" stroke-width="1" opacity="0.15"/>
+  <circle cx="400" cy="250" r="230" fill="none" stroke="#dfe7e0" stroke-width="1" opacity="0.08" stroke-dasharray="4 8"/>
+
+  <!-- Filtration Column 1: Pre-Sedimentation -->
+  <rect x="220" y="110" width="100" height="260" rx="6" fill="url(#chamber)" stroke="#dfe7e0" stroke-width="1.2" stroke-opacity="0.25"/>
+  <rect x="230" y="125" width="80" height="50" rx="3" fill="#2d3748" opacity="0.5"/>
+  <text x="270" y="155" fill="#aab4ad" font-family="'Onest', sans-serif" font-size="11" letter-spacing="1.5" text-anchor="middle">SEDIMENT</text>
+  <rect x="230" y="185" width="80" height="60" rx="3" fill="#202933" opacity="0.7"/>
+  <text x="270" y="220" fill="#aab4ad" font-family="'Onest', sans-serif" font-size="11" letter-spacing="1.5" text-anchor="middle">SILICA SAND</text>
+  <rect x="230" y="255" width="80" height="100" rx="3" fill="#141a20" opacity="0.9"/>
+  <text x="270" y="310" fill="#aab4ad" font-family="'Onest', sans-serif" font-size="11" letter-spacing="1.5" text-anchor="middle">GRAVEL</text>
+  
+  <!-- Flow Channel -->
+  <path d="M320 310 L360 310 L360 160 L380 160" fill="none" stroke="url(#waterFlow)" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Filtration Column 2: Carbon & Micro-Filtration -->
+  <rect x="380" y="110" width="120" height="260" rx="6" fill="url(#chamber)" stroke="#dfe7e0" stroke-width="1.2" stroke-opacity="0.3"/>
+  <rect x="392" y="125" width="96" height="110" rx="3" fill="#11161d" stroke="#e0231c" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="440" y="175" fill="#dfe7e0" font-family="'Onest', sans-serif" font-size="11" font-weight="500" letter-spacing="1.5" text-anchor="middle">ACTIVATED</text>
+  <text x="440" y="195" fill="#e0231c" font-family="'Onest', sans-serif" font-size="10" letter-spacing="2" text-anchor="middle">CARBON CORE</text>
+  <rect x="392" y="245" width="96" height="110" rx="3" fill="#1a2733" opacity="0.8"/>
+  <text x="440" y="295" fill="#38b6db" font-family="'Onest', sans-serif" font-size="11" letter-spacing="1.5" text-anchor="middle">SUB-MICRON</text>
+  <text x="440" y="315" fill="#aab4ad" font-family="'Onest', sans-serif" font-size="10" letter-spacing="1.5" text-anchor="middle">MEMBRANE</text>
+
+  <!-- Flow to Pure Output -->
+  <path d="M500 240 L540 240 L540 340 L560 340" fill="none" stroke="url(#waterFlow)" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Pure Output Chamber -->
+  <rect x="560" y="180" width="70" height="190" rx="6" fill="url(#chamber)" stroke="#38b6db" stroke-width="1.2" stroke-opacity="0.6"/>
+  <rect x="568" y="220" width="54" height="140" rx="3" fill="url(#waterFlow)" opacity="0.8"/>
+  <circle cx="595" cy="205" r="5" fill="#38b6db"/>
+
+  <!-- Technical Labels -->
+  <g font-family="'Onest', sans-serif">
+    <text x="270" y="405" fill="#78837c" font-size="11" letter-spacing="1.8" text-anchor="middle">STAGE 01 : PRE-FILTER</text>
+    <text x="440" y="405" fill="#78837c" font-size="11" letter-spacing="1.8" text-anchor="middle">STAGE 02 : ADSORPTION</text>
+    <text x="595" y="405" fill="#38b6db" font-size="11" letter-spacing="1.8" text-anchor="middle">PURIFIED</text>
+
+    <!-- Top Badge -->
+    <rect x="50" y="46" width="170" height="28" rx="14" fill="#0c1117" stroke="#e0231c" stroke-width="1" stroke-opacity="0.5"/>
+    <circle cx="68" cy="60" r="4" fill="#e0231c"/>
+    <text x="82" y="64" fill="#dfe7e0" font-size="10" font-weight="500" letter-spacing="2">SYSTEM PROTOTYPE</text>
+    <text x="50" y="450" fill="#aab4ad" font-size="12" letter-spacing="0.5">Nilbindu Modular Multi-Stage Physical &amp; Carbon Filtration Core</text>
+  </g>
+</svg>
