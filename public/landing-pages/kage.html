@@ -31,7 +31,7 @@
   --ease-io:cubic-bezier(.65,0,.35,1);
 }
 *,*::before,*::after{box-sizing:border-box}
-html{ -webkit-text-size-adjust:100%; scroll-behavior:auto; }
+html{ -webkit-text-size-adjust:100%; scroll-behavior:auto; overflow-x:hidden; }
 body{
   margin:0; background:var(--ink); color:var(--bone);
   font-family:Georgia,'Times New Roman',serif;
@@ -523,7 +523,8 @@ h1,h2,h3{ font-weight:400; margin:0; letter-spacing:-.005em; }
   .hero-side{ display:none; }
   .chapters{ grid-template-columns:repeat(2,1fr); gap:18px 14px; }
   .chip p{ font-size:10px; }
-  .cards{ grid-template-columns:1fr; gap:14px; }
+  .cards{ grid-template-columns:1fr; gap:14px; width:100%; min-width:0; overflow:hidden; }
+  .card,.card-fr{ width:100%; min-width:0; max-width:100%; }
   .card:nth-child(2),.card:nth-child(3){ transform:none; }
   .gate-stats{ flex-wrap:wrap; gap:20px 34px; }
   .foot-grid{ grid-template-columns:1fr; }
@@ -695,7 +696,7 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
    viewport-wide, so each overhang is cut precisely where it leaves the screen.
    `clip` pairs with `visible` without coercing it, so no scroll container is
    created and every bit of vertical bleed survives. */
-.sec, .foot{ overflow-x:clip; overflow-y:visible; }
+.sec, .foot{ overflow-x:hidden; overflow-y:visible; }
 /* the host for whichever chapter currently owns the near plane — no box of
    its own, since every stage it holds is position:fixed to the viewport */
 #fg-sky{
