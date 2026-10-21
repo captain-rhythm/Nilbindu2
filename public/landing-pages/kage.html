@@ -696,7 +696,7 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
    viewport-wide, so each overhang is cut precisely where it leaves the screen.
    `clip` pairs with `visible` without coercing it, so no scroll container is
    created and every bit of vertical bleed survives. */
-.sec, .foot{ overflow-x:hidden; overflow-y:visible; }
+.sec, .foot{ overflow-x:clip; overflow-y:visible; }
 /* the host for whichever chapter currently owns the near plane — no box of
    its own, since every stage it holds is position:fixed to the viewport */
 #fg-sky{
