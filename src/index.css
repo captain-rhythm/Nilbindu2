@@ -3,18 +3,85 @@ html, body, #root {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: #080808;
 }
 
-.shader-frame {
+.nilbindu-app {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   position: relative;
 }
 
-.shader-frame > .threeui-background,
-.shader-frame > .landing-page-frame {
+.nilbindu-about {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  min-height: min(760px, 100vh);
+  padding: clamp(28px, 6vw, 96px);
+  gap: clamp(28px, 6vw, 96px);
+  align-items: center;
+  color: #eef4f8;
+  background: #08080a;
+}
+
+.nilbindu-about__copy {
+  max-width: 520px;
+  justify-self: center;
+}
+
+.nilbindu-about__eyebrow {
+  margin: 0 0 18px;
+  color: #e0231c;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+.nilbindu-about h1 {
+  margin: 0;
+  font-size: clamp(38px, 5vw, 76px);
+  font-weight: 400;
+  line-height: .98;
+  letter-spacing: -.045em;
+}
+
+.nilbindu-about__copy > p:last-child {
+  max-width: 38ch;
+  margin: 28px 0 0;
+  color: rgba(238, 244, 248, .64);
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.6;
+}
+
+.nilbindu-about__paper {
+  min-width: 0;
+  height: min(680px, 78vh);
+  min-height: 420px;
+  border: 1px solid rgba(238, 244, 248, .14);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .38);
+}
+
+.nilbindu-about__paper > .threeui-background {
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 760px) {
+  .nilbindu-about {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .nilbindu-about__copy {
+    max-width: 620px;
+  }
+
+  .nilbindu-about__paper {
+    height: min(620px, 82vh);
+    min-height: 360px;
+  }
 }

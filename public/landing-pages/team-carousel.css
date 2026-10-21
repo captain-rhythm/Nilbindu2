@@ -2,7 +2,7 @@
   position: relative;
   z-index: 10;
   width: 100%;
-  padding: clamp(72px, 10vw, 132px) var(--pad, clamp(20px, 3.4vw, 56px));
+  padding: clamp(28px, 4vw, 56px) var(--pad, clamp(20px, 3.4vw, 56px));
   color: var(--bone, #eef4f8);
 }
 
