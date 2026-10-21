@@ -1,8 +1,9 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/",
-      "destination": "/landing-pages/kage.html"
+      "destination": "/landing-pages/kage.html",
+      "permanent": false
     }
   ]
 }
