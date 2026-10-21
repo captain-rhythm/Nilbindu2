@@ -2781,9 +2781,12 @@ const vpH = () => document.documentElement.clientHeight || innerHeight;
 let renderer, scene, camera, maxAniso = 1;
 const HI = qs('q', COARSE ? 'low' : 'high');
 const LOW = HI === 'low';
-const WANT_POST    = qs('post', '1') !== '0';
+/* Touch devices get the direct render path by default. The four-level bloom
+   chain is beautiful on desktop but is fill-bound on phones and makes scroll
+   animation feel uneven. It remains opt-in with ?post=1 for testing. */
+const WANT_POST    = qs('post', COARSE ? '0' : '1') !== '0';
 const WANT_SHADOW  = qs('shadow', LOW ? '0' : '1') !== '0';
-const DPR_CAP      = qn('dpr', LOW ? 1.4 : 1.8);
+const DPR_CAP      = qn('dpr', LOW ? 1.0 : 1.8);
 /* the renderer trades resolution for frame rate on its own — the scene is
    fill-bound (five big alpha-blended veils plus a bloom chain), so pixels
    are the only knob worth turning on unknown hardware */
