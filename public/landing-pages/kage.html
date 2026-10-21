@@ -5180,7 +5180,7 @@ function updateWorld(dt) {
   if (CARDS.length) CARDS.forEach(C => { const u = C.cam.userData; u.push = damp(u.push, u.want, 3.4, dt); });
 }
 
-let FRAME = 0;
+let FRAME = 0, SCROLL_FRAME = 0, scrolling = false, scrollStopTimer = 0;
 function render() {
   FRAME++;
   renderer.setRenderTarget(WANT_POST ? POST.scene : null);
@@ -5222,6 +5222,10 @@ function frame(now) {
 
   applyCamera();
   updateWorld(dt);
+  /* Keep native touch scrolling responsive while the expensive 3D scene
+     renders at half cadence during an active swipe. */
+  if (COARSE && scrolling && (++SCROLL_FRAME % 2)) { queue(); return; }
+  SCROLL_FRAME = 0;
   render();
   queue();
 }
@@ -5313,6 +5317,12 @@ function fallback(err) {
 function start() {
   addEventListener('resize', () => { resize(); }, { passive: true });
   addEventListener('orientationchange', () => setTimeout(resize, 250));
+  addEventListener('scroll', () => {
+    if (!COARSE) return;
+    scrolling = true;
+    clearTimeout(scrollStopTimer);
+    scrollStopTimer = setTimeout(() => { scrolling = false; SCROLL_FRAME = 0; }, 120);
+  }, { passive: true });
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) { running = false; }
     else if (!running) { running = true; tPrev = performance.now(); queue(); }
