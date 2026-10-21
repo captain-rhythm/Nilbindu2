@@ -1167,6 +1167,10 @@ body[data-layout-hero="b"] .chip .tx{
 }
 .les p{ display:block; }
 @media (max-width:820px){
+  /* Keep decorative foreground art behind readable content on narrow screens. */
+  .fg{ z-index:1; }
+  .cur-head h2,.cur-head .body-lg{ max-width:100%; overflow:visible; }
+  .les h3,.les p{ min-width:0; overflow-wrap:anywhere; }
   .nav-links{ overflow-y:auto; }
   .peek{
     display:block; position:relative; top:auto; right:auto;
